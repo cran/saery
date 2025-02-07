@@ -1,1 +1,7 @@
 export(eblup.saery, eblup.saery.AR1, eblup.saery.MA1, eblup.saery.indep, fit.saery, fit.saery.AR1, fit.saery.MA1, fit.saery.indep)
+
+
+importFrom("grDevices", "devAskNewPage")
+importFrom("graphics", "abline", "axis", "legend", "lines", "par", "title")
+importFrom("stats", "pnorm", "qnorm", "rnorm")
+importFrom("utils", "write.table")

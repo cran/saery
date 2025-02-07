@@ -17,7 +17,7 @@ function(X, ydi, D, md, sigma2edi, plot){
   resid <- ydi-mudi.hat
   
   if(plot==TRUE)
-    plot.saery(ydi, mudi.hat, mse, sigma2edi)
+    plotsaery(ydi, mudi.hat, mse, sigma2edi)
   
   return(data.frame(Domain=rep(1:D,md), Period=sequence(md), direct=ydi, eblup=mudi.hat, var.direct=sigma2edi, mse.eblup=mse, resid=resid))
   

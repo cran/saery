@@ -35,13 +35,13 @@ function(X, D, md, beta, sigma2edi, sigmau1, sigmau2, rho, Fsig, B){
     
     fitboot <- try(REML.saery.AR1(X, ydi.ast1, D, md, sigma2edi, sigma1.0=sigma.0,sigma2.0=sigma.0), TRUE)    # 
     
-    if(class(fitboot)=="try-error"){
+    if(inherits(fitboot,"try-error")){
       excepcion <- c(excepcion, b)
-      write.table(data.frame(class(fitboot),D,b), file="WARNING.txt", append=TRUE, col.names=FALSE, row.names=FALSE)
+      # write.table(data.frame(class(fitboot),D,b), file="WARNING.txt", append=TRUE, col.names=FALSE, row.names=FALSE)
       b <- b-1
     }
     else {
-      cat("Bootstrap sample no. " , b,"\n")
+      message("Bootstrap sample no. " , b,"\n")
       
       sigmau1.gorro.ast <- fitboot[[1]][1]
       sigmau2.gorro.ast <- fitboot[[1]][2]

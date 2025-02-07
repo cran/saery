@@ -36,14 +36,14 @@ function(X, D, md, beta, sigma2edi, sigmau1, sigmau2, theta, Fsig, B){
     
     fit2 <- try(REML.saery.MA1(X, ydi.ast, D, md, sigma2edi, sigma.0=sigma.0, MAXITER=50), TRUE)    # 
     
-    if(class(fit2)=="try-error"){
+    if(inherits(fit2,"try-error")){
       excepcion <- c(excepcion, b)
-      write.table(data.frame(class(fit2),D,b), file="WARNING.txt", append=TRUE, col.names=FALSE)
+      # write.table(data.frame(class(fit2),D,b), file="WARNING.txt", append=TRUE, col.names=FALSE)
       b <- b-1
       BadTot2 <- BadTot2 + 1
     }
     else {
-      cat("Bootstrap Sample no. " , b,"\n")
+      message("Bootstrap Sample no. " , b,"\n")
       
       if(fit2[[3]]<50) {  
         sigmau1.gorro.ast <- fit2[[1]][1]

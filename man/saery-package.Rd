@@ -12,17 +12,17 @@ A complete set of functions to calculate several eblups estimators and its mean 
 \tabular{ll}{
 Package: \tab saery\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2014-09-10\cr
+Version: \tab 2.0\cr
+Date: \tab 2025-02-06\cr
 License: \tab GPL-2\cr
 }
 The main functions of the saery package are \code{fit.saery} and \code{eblup.saery}.
 The function \code{fit.saery} is used to fit the correct model for three options. \code{eblup.saery} calculates the eblup and mse for the model.
 }
 \author{
-Maria Dolores Esteban Lefler, Domingo Morales Gonzalez, Agustin Perez Martin
+Esteban Cabello Garcia, Maria Dolores Esteban Lefler, Domingo Morales Gonzalez, Agustin Perez Martin
 
-Maintainer: Agustin Perez Martin <agustin.perez@umh.es>
+Maintainer: Perez Agustin <agustin.perez@umh.es>
 }
 \references{
 Rao, J.N.K., Yu, M., 1994. Small area estimation by combining time series and cross sectional data. Canadian Journal of Statistics 22, 511-528.
